@@ -1,13 +1,13 @@
 FROM python:3.6-alpine
 
+# Add actual source code.
+ADD . /app
+
 # Go to working directory.
 WORKDIR /app
 
 #Install dependencies
 RUN pip install -r requirements.txt
-
-# Add actual source code.
-ADD . /app
 
 #Command to launch when container starts
 ENTRYPOINT ["python"]
