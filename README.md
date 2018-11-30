@@ -8,6 +8,9 @@
 
 ### Python v3.6, pipenv
 
+### Build docker image
+docker build -t flask_app .
+
 ### Execute test
 docker run -d -p 4000:5000 flask_app test/test_flaskapi.py
 
