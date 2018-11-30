@@ -1,10 +1,17 @@
 pipeline {
-    agent { dockerfile true }
+    agent none 
     stages {
-        stage('Test') {
+        stage('Build') { 
+            agent {
+                docker {
+                    image 'python36-alpine-base-jenkins-plugins' 
+                }
+            }
             steps {
-                sh 'ls'
+                sh 'python --version' 
             }
         }
     }
 }
+
+
