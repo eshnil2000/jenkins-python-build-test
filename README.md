@@ -16,3 +16,5 @@ docker run -d -p 4000:5000 flask_app test/test_flaskapi.py
 
 ### Execute app
 docker run -d -p 5000:5000 flask_app 
+
+### Pipeline defined in Jenkinsfile
