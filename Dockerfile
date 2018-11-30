@@ -13,4 +13,4 @@ RUN pip install -r requirements.txt
 ENTRYPOINT ["python"]
 
 #Parameter to pass to container, can be overridden at docker command line
-CMD ["flask_app.py"]
+CMD ["flaskapi.py"]
