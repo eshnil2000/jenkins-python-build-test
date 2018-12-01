@@ -17,6 +17,7 @@ pipeline {
             agent {
                 docker {
                     image 'python:3.6-alpine' 
+                    args '-p 5000:5000'
                 }
             }
             steps {
