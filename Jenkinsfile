@@ -25,7 +25,7 @@ pipeline {
                 sh 'set -x'
                 sh 'python flaskapi.py &'
                 sh 'sleep 4'
-                sh 'echo $! > .pidfile'
+                sh 'echo "$!"> .pidfile'
                 sh 'cat .pidfile'
                 sh 'set +x'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
