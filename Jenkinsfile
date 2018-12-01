@@ -24,7 +24,7 @@ pipeline {
                 sh 'pip install -r requirements.txt'
                 sh 'set -x'
                 sh 'python flaskapi.py &'
-                sh 'sleep 1'
+                sh 'sleep 4'
                 sh 'echo $! > .pidfile'
                 sh 'cat .pidfile'
                 sh 'set +x'
