@@ -4,7 +4,7 @@ pipeline {
         stage('Build') { 
             agent {
                 docker {
-                    image 'python36-alpine-base-jenkins-plugins' 
+                    image 'python:3.6-alpine' 
                 }
             }
             steps {
