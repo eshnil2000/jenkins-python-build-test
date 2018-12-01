@@ -22,9 +22,7 @@ pipeline {
             }
             steps {
                 sh 'pip install -r requirements.txt'
-<<<<<<< HEAD
                 sh './jenkins/scripts/deliver.sh'
->>>>>>> eba305ef6fc628209c54826fa7822ad2fd6ddbc1
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
                 sh './jenkins/scripts/kill.sh'
             }
