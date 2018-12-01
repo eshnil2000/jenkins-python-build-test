@@ -22,15 +22,9 @@ pipeline {
             }
             steps {
                 sh 'pip install -r requirements.txt'
-                sh 'set -x'
-                sh 'python flaskapi.py &'
-                sh 'sleep 1'
-                sh 'echo $! > .pidfile'
-                sh 'cat .pidfile'
-                sh 'set +x'
+                sh './jenkins/scripts/deliver.sh'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
-                sh 'set -x'
-                sh 'kill $(cat .pidfile)'
+                sh './jenkins/scripts/kill.sh'
             }
         }        
     }
