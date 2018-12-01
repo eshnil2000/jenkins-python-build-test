@@ -9,6 +9,7 @@ pipeline {
             }
             steps {
                 sh 'python --version' 
+                sh 'pip install -r requirements.txt'
                 sh 'python test/test_flaskapi.py'
             }
         }
